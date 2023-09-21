@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <title>Phiếu đăng kí học</title>
+</head>
+
+<body style="background-image: url('../Lab/IMg/bg-register.jpg');">
+    <img src="../Lab/IMg/Banner.png" class="img-fluid" alt="">
+
+    <div class="container-fluid bg-image">
+        <h1 class="text-center fw-bold mt-4" style="color: #2e3192;">PHIẾU ĐĂNG KÍ HỌC</h1>
+        
+        <div class="container bg-light" style="font-size: 15px;">
+            <p class="fw-bold mt-5" style="color: #2e3192; font-size: larger;"><i class="bi bi-square-fill" style="color: coral;"></i>  Thông Tin Học Sinh</p>
+
+            <div class="row">
+                <div class="col-3">
+                    <label for="exampleFormControlInput1" class="form-label">Họ và tên</label>
+                    <input class="form-control form-control-lg text-muted" style="font-size: 15px;" type="text"
+                        placeholder="Họ và tên" aria-label=".form-control-lg example">
+                </div>
+                <div class="col-3">
+                    <label for="exampleFormControlInput1" class="form-label">Ngày Sinh</label>
+                    <input class="form-control form-control-lg text-muted" style="font-size: 15px;" type="text"
+                        placeholder="DD/MM/YYYY" aria-label=".form-control-lg example">
+                </div>
+                <div class="col-3">
+                    <label for="exampleFormControlInput1" class="form-label">Giới Tính</label>
+                    <select class="form-select form-select-lg" style="font-size: 15px;"
+                        aria-label="Default select example">
+                        <option selected>Nam</option>
+                        <option value="1">Nữ</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <label for="exampleFormControlInput1" class="form-label">Dân Tộc</label>
+                    <input class="form-control form-control-lg text-muted" style="font-size: 15px;" type="text"
+                        placeholder="Kinh" aria-label=".form-control-lg example">
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-4">
+                    <label for="exampleFormControlInput1" class="form-label">Số CMND/CCCD</label><input
+                        class="form-control form-control-lg text-muted" style="font-size: 15px;" type="text"
+                        placeholder="0123456789" aria-label=".form-control-lg example">
+                </div>
+                <div class="col-4">
+                    <label for="exampleFormControlInput1" class="form-label">Ngày Cấp</label>
+                    <input class="form-control form-control-lg text-muted" style="font-size: 15px;" type="text"
+                        placeholder="DD/MM/YYYY" aria-label=".form-control-lg example">
+                </div>
+                <div class="col-4">
+                    <label for="exampleFormControlInput1" class="form-label">Nơi Cấp</label>
+                    <input class="form-control form-control-lg text-muted" style="font-size: 15px;" type="text"
+                        placeholder="Hà Nội" aria-label=".form-control-lg example">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <p class="fw-bold">Nơi thường trú(Điền như trong CCCD/CMND)</p>
+                <div class="col-3">
+                    <select class="form-select form-select-lg" style="font-size: 15px;"
+                        aria-label="Default select example">
+                        <option selected>Chọn Tỉnh/Thành Phố</option>
+                        <option value="1">Hà Nội</option>
+                        <option value="2">Hồ Chí Minh</option>
+                        <option value="3">Hải Phòng</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <select class="form-select form-select-lg" style="font-size: 15px;"
+                        aria-label="Default select example">
+                        <option selected>Quận/Huyện</option>
+                        <option value="1">.......</option>
+                        <option value="2">.......</option>
+                        <option value="3">.......</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <select class="form-select form-select-lg" style="font-size: 15px;"
+                        aria-label="Default select example">
+                        <option selected>Xã/Phường/Thị Trấn</option>
+                        <option value="1">.......</option>
+                        <option value="2">.......</option>
+                        <option value="3">.......</option>
+                    </select>
+                </div>
+                <div class="col-3">
+                    <input class="form-control form-control-lg text-muted" style="font-size: 15px;" type="text"
+                        placeholder="Số Nhà,Đường,Ngõ Xóm" aria-label=".form-control-lg example">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-3">
+                    <label for="exampleFormControlInput1" class="form-label">Số Điện Thoại Thí Sinh</label>
+                    <input class="form-control form-control-lg text-muted" style="font-size: 15px;" type="text"
+                        placeholder="0123456789" aria-label=".form-control-lg example">
+                </div>
+                <div class="col-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email Thí Sinh</label>
+                    <input class="form-control form-control-lg text-muted" style="font-size: 15px;" type="text"
+                        placeholder="Example@gmail.com" aria-label=".form-control-lg example">
+                </div>
+                <div class="col-3">
+                    <label for="exampleFormControlInput1" class="form-label">Họ Tên Phụ Huynh/Người Bảo Trợ</label>
+                    <input class="form-control form-control-lg text-muted" style="font-size: 15px;" type="text"
+                        placeholder="Họ Tên" aria-label=".form-control-lg example">
+                </div>
+                <div class="col-3">
+                    <label for="exampleFormControlInput1" class="form-label">Số Điện thoại Phụ Huynh/Người Bảo
+                        Trợ</label>
+                    <input class="form-control form-control-lg text-muted" style="font-size: 15px;" type="text"
+                        placeholder="0123456789" aria-label=".form-control-lg example">
+                </div>
+            </div>
+
+            <p class="fw-bold mt-5" style="color: #2e3192; font-size: larger;"><i class="bi bi-square-fill" style="color: coral;"></i>  THÔNG TIN ĐĂNG KÍ TRƯỜNG CAO ĐẲNG FPT POLYTECHNIC</p>
+
+            <div class="row">
+                <div class="col-6">
+                    <label for="exampleFormControlInput1" class="form-label">Cơ sở nhập học</label>
+                    <select class="form-select form-select-lg" style="font-size: 15px;"
+                        aria-label="Default select example">
+                        <option selected>Hà Nội</option>
+                        <option value="1">Hồ CHí Minh</option>
+                        <option value="2">Hải Phòng</option>
+                        <option value="3">Thanh Hóa</option>
+                        <option value="4">Đà Nẵng</option>
+                        <option value="5">Cần Thơ</option>
+                        <option value="6">Nam Định</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-6">
+                    <label for="exampleFormControlInput1" class="form-label">Nguyện vọng thứ nhất</label>
+                    <div class="row">
+                        <div class="col-6">
+                            <select class="form-select form-select-lg" style="font-size: 15px;"
+                                aria-label="Default select example">
+                                <option selected>Chuyên Ngành</option>
+                                <option value="1">Phát triển phần mềm</option>
+                                <option value="2">Lập trình Web</option>
+                                <option value="3">Lập trình Mobile</option>
+                                <option value="4">Ứng dụng phần mềm</option>
+                                <option value="5">Xử lý tín hiệu số</option>
+                                <option value="6">Lập trình game</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <select class="form-select form-select-lg" style="font-size: 15px;"
+                                aria-label="Default select example">
+                                <option selected>Ngành</option>
+                                <option value="1">Công nghệ thông tin</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-6">
+                    <label for="exampleFormControlInput1" class="form-label">Nguyện vọng thứ hai</label>
+                    <div class="row">
+                        <div class="col-6">
+                            <select class="form-select form-select-lg" style="font-size: 15px;"
+                                aria-label="Default select example">
+                                <option selected>Chuyên Ngành</option>
+                                <option value="1">Phát triển phần mềm</option>
+                                <option value="2">Lập trình Web</option>
+                                <option value="3">Lập trình Mobile</option>
+                                <option value="4">Ứng dụng phần mềm</option>
+                                <option value="5">Xử lý tín hiệu số</option>
+                                <option value="6">Lập trình game</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <select class="form-select form-select-lg" style="font-size: 15px;"
+                                aria-label="Default select example">
+                                <option selected>Ngành</option>
+                                <option value="1">Công nghệ thông tin</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-6">
+                    <label for="exampleFormControlInput1" class="form-label">Năm tốt nghiệp THPT hoặc tương
+                        đương</label>
+                    <select class="form-select form-select-lg" style="font-size: 15px;"
+                        aria-label="Default select example">
+                        <option selected>2023</option>
+                        <option value="1">2022</option>
+                        <option value="2">2021</option>
+                        <option value="3">2020</option>
+                        <option value="4">2019</option>
+                        <option value="5">2018</option>
+                        <option value="6">2017</option>
+                        <option value="7">2016</option>
+                        <option value="8">2015</option>
+                        <option value="9">2014</option>
+                        <option value="10">2013</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <label for="exampleFormControlInput1" class="form-label">Trường tốt nghiệp THPT hoặc tương
+                        đương</label>
+                    <input class="form-control form-control-lg text-muted" style="font-size: 15px;" type="text"
+                        placeholder="Trường" aria-label=".form-control-lg example">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <label for="exampleFormControlInput1" class="form-label">Nơi tốt nghiệp</label>
+                <div class="col-4">
+                    <select class="form-select form-select-lg" style="font-size: 15px;"
+                        aria-label="Default select example">
+                        <option selected>Chọn Tỉnh/Thành Phố</option>
+                        <option value="1">Hà Nội</option>
+                        <option value="2">Hồ Chí Minh</option>
+                        <option value="3">Hải Phòng</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <select class="form-select form-select-lg" style="font-size: 15px;"
+                        aria-label="Default select example">
+                        <option selected>Quận/Huyện</option>
+                        <option value="1">.......</option>
+                        <option value="2">.......</option>
+                        <option value="3">.......</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <select class="form-select form-select-lg" style="font-size: 15px;"
+                        aria-label="Default select example">
+                        <option selected>Xã/Phường/Thị Trấn</option>
+                        <option value="1">.......</option>
+                        <option value="2">.......</option>
+                        <option value="3">.......</option>
+                    </select>
+                </div>
+            </div>
+
+            <p class="fw-bold mt-5" style="color: #2e3192; font-size: larger;"><i class="bi bi-square-fill" style="color: coral;"></i>  THÔNG TIN NHẬN GIẤY BÁO KẾT QUẢ</p>
+            
+            <div class="row mt-4">
+                <div class="col-6">
+                    <label for="exampleFormControlInput1" class="form-label" style="font-weight: 500;">Người nhận</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Thí Sinh
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Phụ huynh/Người bảo trợ
+                        </label>
+                      </div>
+                </div>
+                <div class="col-6">
+                    <label for="exampleFormControlInput1" class="form-label" style="font-weight: 500;">Địa chỉ nhận</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Địa chỉ thường trú
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Khác
+                        </label>
+                      </div>
+                </div>
+            </div>
+
+            <p class="fw-bold" style="color: #2e3192; font-size: larger; margin-top: 60px;"><i class="bi bi-square-fill" style="color: coral;"></i>    TẢI LÊN GIẤY TỜ XÁC THỰC</p>
+
+            <div class="row mt-4">
+                <div class="col-3">
+                    <label for="exampleFormControlInput1" class="form-label" style="font-weight: 500;">Ảnh CMND/CCCD mặt trước</label><br>
+                    <p style="margin-top: -5px; line-height: 20px; color: #bebebe;">(bắt buộc)</p>
+                    <img src="../Lab/IMg/cccd-mt.png" class="img-fluid" style="margin-top: -5px;" alt="">
+                    <input type="file" class="form-control form-control-sm" id="inputGroupFile01">
+                </div>
+                <div class="col-3">
+                    <label for="exampleFormControlInput1" class="form-label" style="font-weight: 500;">Ảnh CMND/CCCD mặt sau</label><br>
+                    <p style="margin-top: -5px; line-height: 20px; color: #bebebe;">(bắt buộc)</p>
+                    <img src="../Lab/IMg/cccd-ms.png" class="img-fluid" style="margin-top: -5px;" alt="">
+                    <input type="file" class="form-control form-control-sm" id="inputGroupFile01">
+                </div>
+                <div class="col-6">
+                    <label for="exampleFormControlInput1" class="form-label" style="font-weight: 500;">Bản sao công chứng Bằng tốt nghiệp THPT</label><br>
+                    <p style="margin-top: -5px; line-height: 20px; color: #bebebe;">Hoặc giấy tốt nghiệp tạm thời(không bắt buộc)</p>
+                    <img src="../Lab/IMg/bang-tot-nghiep-thpt.png" style="margin-top: -5px; width: 100%; height: 195px;" alt="">
+                    <input type="file" class="form-control form-control-sm" id="inputGroupFile01">
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
