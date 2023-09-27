@@ -1,0 +1,3 @@
+myApp.contactController = function($scope) {
+    
+}

@@ -1,0 +1,3 @@
+window.aboutController = function($scope) {
+    
+}
