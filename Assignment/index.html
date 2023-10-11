@@ -15,13 +15,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-    <!-- Angularjs -->
-    <script src="./angular.min.js"></script>
-    <script src="./libs/angular-route.min.js"></script>
-    <script src="./controller/homeController.js"></script>
-    <script src="./controller/aboutController.js"></script>
-    <script src="./controller/contactController.js"></script>
-    <script src="./js/scrip.js"></script>
     <title>Assignment1</title>
 </head>
 <body ng-app="appAssignment" style="background-color: rgb(170, 209, 196);">
@@ -49,4 +42,31 @@
 
     </footer>
 </body>
+<script src="./controller/homeController.js"></script>
+<script src="./controller/aboutController.js"></script>
+<script src="./controller/contactController.js"></script>
+<script>
+  let myApp = angular.module('appAssignment', ['ngRoute']);
+
+myApp.config(function($routeProvider) {
+    $routeProvider
+        .when('/home', {
+            templateUrl: 'views/home.html',
+            controller: 'homeController'
+        })
+        .when('/about', {
+            templateUrl: 'views/about.html',
+            controller: 'aboutController'
+        })
+        .when('/contact', {
+            templateUrl: 'views/contact.html',
+            controller: 'contactController'
+        })
+        .otherwise(
+          {
+            redirectTo: '/home',
+          }
+        );
+});
+</script>
 </html>

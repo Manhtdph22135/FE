@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "formsignin": [
+    {
+      "id": 1,
+      "ten": "Trần Đức Mạnh",
+      "Email": "Manhtdph22135@gmail.com",
+      "SDT": "0353013106",
+      "gioitinh": 0,
+      "ngaysinh": "2021-05-05",
+      "khoahoc":"C#/ASP.NET",
+      "ghichu":"Đã đăng ký khóa học C#/ASP.NET"
+    },
+    {
+      "id": 2,
+      "ten": "Trần Đức Mạnh",
+      "Email": "Manhtdph22135@gmail.com",
+      "SDT": "0353013106",
+      "gioitinh": 0,
+      "ngaysinh": "2021-05-05",
+      "khoahoc":"C#/ASP.NET",
+      "ghichu":"Đã đăng ký khóa học C#/ASP.NET"
+    }
+  ]
+}

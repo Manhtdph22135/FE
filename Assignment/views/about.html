@@ -1,57 +1,74 @@
-<div class="container" style="width: 1200px;">
-  <div class="row">
-    <div class="col-6">
-      <div class="ms-5 mt-4">
-        <label for="exampleFormControlInput1" class="form-label fw-bold" style="font-size: larger;">Họ và tên</label>
-        <input type="text" style="width: 500px;" class="form-control" id="exampleFormControlInput1" placeholder="Họ và tên">
+<div style="background-color: rgb(170, 209, 196);" class="card my-5">
+  <h5 class="card-header">{{  title   }}</h5>
+  <div class="card-body">
+    <div class="container" style="width: 1200px;">
+      <div class="row">
+        <div class="col-6">
+          <div class="ms-5 mt-4">
+            <label for="exampleFormControlInput1" class="form-label fw-bold" style="font-size: larger;">Họ và tên</label>
+            <input type="text" ng-model="formsignin.name" style="width: 500px;" class="form-control" id="exampleFormControlInput1" placeholder="Họ và tên">
+            <div ng-if="check.name" class="text-danger">
+              Vui lòng nhập họ và tên!
+            </div>
+          </div>
+          <div class="ms-5 mt-3">
+            <label for="exampleFormControlInput1" class="form-label fw-bold" style="font-size: larger;">Email</label>
+            <input type="email" ng-model="formsignin.mail" style="width: 500px;" class="form-control" id="exampleFormControlInput1" placeholder="example@gmail.com">
+            <div ng-if="check.mail" class="text-danger">
+              Vui lòng nhập email!
+            </div>
+          </div>
+          <div class="ms-5 mt-1">
+            <label for="exampleFormControlInput1" class="form-label fw-bold" style="font-size: larger;">Số điện thoại</label>
+            <input type="number" ng-model="formsignin.phone" style="width: 500px;" class="form-control" id="exampleFormControlInput1" placeholder="0123456789">
+            <div ng-if="check.phone" class="text-danger">
+              Vui lòng nhập số điện thoại!
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="ms-5 mt-4">
+            <label for="exampleFormControlInput1" class="form-label fw-bold" style="font-size: larger;">Giới tính</label>
+            <div class="form-check">
+              <input class="form-check-input" ng-model="formsignin.sex" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Nam
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" ng-model="formsignin.sex" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Nữ
+              </label>
+            </div>
+          </div>
+          <div class="ms-5 mt-1">
+            <label for="exampleFormControlInput1" class="form-label fw-bold" style="font-size: larger;">Ngày Sinh</label>
+            <input type="text" ng-model="formsignin.date" style="width: 500px;" class="form-control" id="exampleFormControlInput1" placeholder="dd/mm/yyyy">
+            <div ng-if="check.date" class="text-danger">
+              Vui lòng nhập ngày, tháng, năm sinh!
+            </div>
+          </div>
+          <div class="ms-5 mt-1">
+            <label for="exampleFormControlInput1" class="form-label fw-bold" style="font-size: larger;">Chọn khóa học</label>
+            <select class="form-select form-select-lg" ng-model="formsignin.course" style="font-size: 15px;" aria-label="Default select example">
+            <option selected>C#/ASP.Net</option>
+            <option value="1">Java</option>
+            <option value="2">Javascrip</option>
+            <option value="3">HTML3/CSS5</option>
+            </select>
+          </div>
+        </div>
       </div>
-      <div class="ms-5 mt-3">
-        <label for="exampleFormControlInput1" class="form-label fw-bold" style="font-size: larger;">Email</label>
-        <input type="email" style="width: 500px;" class="form-control" id="exampleFormControlInput1" placeholder="example@gmail.com">
+      <div class="ms-5 mt-5 mb-4">
+        <label for="exampleFormControlTextarea1" class="form-label fw-bold" style="font-size: larger;">Ghi chú</label>
+        <textarea class="form-control form-control-lg" ng-model="formsignin.note" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
-      <div class="ms-5 mt-1">
-        <label for="exampleFormControlInput1" class="form-label fw-bold" style="font-size: larger;">Số điện thoại</label>
-        <input type="number" style="width: 500px;" class="form-control" id="exampleFormControlInput1" placeholder="0123456789">
+      <div class="container-fluid" style="width: 600px;">
+          <button type="reset" class="btn btn-danger fw-bold" style="color: bisque; width: 100px; margin-left: 150px;">Clear</button>
+          <button type="submit" class="btn btn-primary fw-bold" style="color: bisque; width: 100px; margin-left: 100px;">Submit</button>
       </div>
     </div>
-    <div class="col-6">
-      <div class="ms-5 mt-4">
-        <label for="exampleFormControlInput1" class="form-label fw-bold" style="font-size: larger;">Giới tính</label>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-          <label class="form-check-label" for="flexRadioDefault1">
-            Nam
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-          <label class="form-check-label" for="flexRadioDefault2">
-            Nữ
-          </label>
-        </div>
-      </div>
-      <div class="ms-5 mt-1">
-        <label for="exampleFormControlInput1" class="form-label fw-bold" style="font-size: larger;">Ngày Sinh</label>
-        <input type="text" style="width: 500px;" class="form-control" id="exampleFormControlInput1" placeholder="dd/mm/yyyy">
-      </div>
-      <div class="ms-5 mt-1">
-        <label for="exampleFormControlInput1" class="form-label fw-bold" style="font-size: larger;">Chọn khóa học</label>
-        <select class="form-select form-select-lg" style="font-size: 15px;" aria-label="Default select example">
-        <option selected>C#/ASP.Net</option>
-        <option value="1">Java</option>
-        <option value="2">Javascrip</option>
-        <option value="3">HTML3/CSS5</option>
-        </select>
-      </div>
-    </div>
-  </div>
-  <div class="ms-5 mt-5 mb-4">
-    <label for="exampleFormControlTextarea1" class="form-label fw-bold" style="font-size: larger;">Ghi chú</label>
-    <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-  <div class="container-fluid" style="width: 600px;">
-      <button type="button" class="btn btn-danger fw-bold" style="color: bisque; width: 100px; margin-left: 150px;">Clear</button>
-      <button type="button" class="btn btn-primary fw-bold" style="color: bisque; width: 100px; margin-left: 100px;">Submit</button>
   </div>
 </div>
 
