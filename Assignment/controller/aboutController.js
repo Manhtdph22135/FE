@@ -1,64 +1,63 @@
 window.aboutController = function($scope, $http, $location) {
-    $scope.title = "Đăng Kí Khóa Học";
+    $scope.titles = "Đăng Kí Khóa Học";
 
-    $scope.signinKhoahoc = function() {
+    $scope.signinKhoaHoc = function() {
         // link api
-        const apiFormKhoahoc = "http://localhost:3000/formsignin";
+        const apiKhoaHoc = "http://localhost:3000/formsignin";
 
-        /// Tạo biến kiểm tra
-        let checks = true;
+        // tạo biến kiểm tra
+        // let check = true;
 
-        // Kiểm tra dữ liệu
-        $scope.check = {
-            name: false,
-            mail: false,
-            phone: false,
-            date: false,
-        }
+        // // kiểm tra từng trường dữ liệu
+        // $scope.kiemtra = {
+        //     name: false,
+        //     email: false,
+        //     phone: false,
+        //     date: false,
+        // }
 
-        // Kiểm tra dữ liệu
-        if (!$scope.formsignin || !$scope.formsignin.name) {
-            $scope.check.name = true;
-            checks = false;
-        }
+        // // Kiểm tra dữ liệu
+        // if ($scope.formsignin || $scope.formsignin.name){
+        //     $scope.kiemtra.name = true;
+        //     check = false;
+        // }
+        // if ($scope.formsignin || $scope.formsignin.email){
+        //     $scope.kiemtra.email = true;
+        //     check = false;
+        // }
+        // if ($scope.formsignin || $scope.formsignin.phone){
+        //     $scope.kiemtra.phone = true;
+        //     check = false;
+        // }
+        // if ($scope.formsignin || $scope.formsignin.date){
+        //     $scope.kiemtra.date = true;
+        //     check = false;
+        // }
+        // if (check) {
+        //     // Dữ liệu nhập từ ô input
             
-        if (!$scope.formsignin || !$scope.formsignin.mail) {
-            $scope.check.mail = true;
-            checks = false;
-        }
-        if (!$scope.formsignin || !$scope.formsignin.phone) {
-            $scope.check.phone = true;
-            checks = false;
-        }
-        if (!$scope.formsignin || !$scope.formsignin.date) {
-            $scope.check.date = true;
-            checks = false;
-        }
-
-        if (checks) {
-            let newKhoahoc = {
+        // }
+        let newSignin = {
                 ten: $scope.formsignin.name,
-                Email: $scope.formsignin.mail,
+                Email: $scope.formsignin.email,
                 SDT: $scope.formsignin.phone,
                 gioitinh: $scope.formsignin.sex,
                 ngaysinh: $scope.formsignin.date,
                 khoahoc: $scope.formsignin.course,
                 ghichu: $scope.formsignin.note
             }
-
             $http.post(
-                apiFormKhoahoc,
-                newKhoahoc
+                apiKhoaHoc,
+                newSignin
             ).then(function(response) {
                 console.log(response);
                 if (response.status == 201) {
-                    alert("Đăng ký thành công");
-                    $location.path('/home');
+                    alert("Đăng Kí Thành Công");
+                    $location.path('/listSignin');
+                }
+                else {
+                    alert("Đăng Kí Thất Bại");
                 }
             })
-        }
-        else{
-            alert("Vui lòng nhập đầy đủ thông tin");
-        }
     }
 }

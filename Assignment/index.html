@@ -42,9 +42,6 @@
 
     </footer>
 </body>
-<script src="./controller/homeController.js"></script>
-<script src="./controller/aboutController.js"></script>
-<script src="./controller/contactController.js"></script>
 <script>
   let myApp = angular.module('appAssignment', ['ngRoute']);
 
@@ -52,21 +49,27 @@ myApp.config(function($routeProvider) {
     $routeProvider
         .when('/home', {
             templateUrl: 'views/home.html',
-            controller: 'homeController'
+            controller: homeController
         })
         .when('/about', {
             templateUrl: 'views/about.html',
-            controller: 'aboutController'
+            controller: aboutController
         })
         .when('/contact', {
             templateUrl: 'views/contact.html',
-            controller: 'contactController'
+            controller: contactController
         })
-        .otherwise(
-          {
+        .when('/list', {
+            templateUrl: 'views/list.html',
+            controller: listSigninController
+        })
+        .otherwise({
             redirectTo: '/home',
-          }
-        );
+        });
 });
 </script>
+<script src="./controller/homeController.js"></script>
+<script src="./controller/aboutController.js"></script>
+<script src="./controller/contactController.js"></script>
+<script src="./controller/listSigninController.js"></script>
 </html>
